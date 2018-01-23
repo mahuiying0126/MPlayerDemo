@@ -615,13 +615,13 @@ final class MPlayerView: UIView,UIGestureRecognizerDelegate,MChangeRateValueDele
             }
         }else if keyPath == "loadedTimeRanges"{
             ///计算视频缓存速度,可自行实现具体效果
-            let loadedTimeRanges = self.player?.currentItem?.loadedTimeRanges
-            let timeRange = loadedTimeRanges?.first?.timeRangeValue
-            
-            let startSeconds = CMTimeGetSeconds((timeRange?.start)!)
-            let durationSeconds = CMTimeGetSeconds((timeRange?.duration)!)
-            let result = startSeconds + durationSeconds
-            print(result)
+//            let loadedTimeRanges = self.player?.currentItem?.loadedTimeRanges
+//            let timeRange = loadedTimeRanges?.first?.timeRangeValue
+//            
+//            let startSeconds = CMTimeGetSeconds((timeRange?.start)!)
+//            let durationSeconds = CMTimeGetSeconds((timeRange?.duration)!)
+//            let result = startSeconds + durationSeconds
+//            print(result)
             self.viewModel?.repeatBtn?.isHidden = true
             
         }
