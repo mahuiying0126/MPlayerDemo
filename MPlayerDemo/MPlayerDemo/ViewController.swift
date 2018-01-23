@@ -45,13 +45,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let videoUrl = "http://v.96koo.net/common/LzIwNC9yZWxlYXNlLzIwMTgwMTE1L2Y1cDQ4d0NLa0ovZjVwNDh3Q0trSl85NjBfMTAwMA==_1402.m3u8"
-        //http://v.96koo.net/common/LzIwNC9yZWxlYXNlLzIwMTgwMTE1L2Y1cDQ4d0NLa0ovZjVwNDh3Q0trSl85NjBfMTAwMA==_1402.m3u8
-        
         if self.playerView != nil {
             self.playerView?.removeFromSuperview()
             self.playerView?.exchangeWithURL(videoURLStr: videoUrl)
         }else{
-            self.playerView  = MPlayerView.shared.initWithFrame(frame: CGRect.init(x: 0, y: 0, width: Screen_width, height: Screen_width * 9/16), videoUrl: videoUrl, type: "VIDEO")
+            self.playerView  = MPlayerView().initWithFrame(frame: CGRect.init(x: 0, y: 0, width: Screen_width, height: Screen_width * 9/16), videoUrl: videoUrl, type: "VIDEO")
             self.playerView?.mPlayerDelegate = self
             self.view.addSubview(self.playerView!)
         }

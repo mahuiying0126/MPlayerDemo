@@ -769,10 +769,10 @@ final class MPlayerView: UIView,UIGestureRecognizerDelegate,MChangeRateValueDele
         sender.isSelected = !sender.isSelected
         let appde = UIApplication.shared.delegate as! AppDelegate
         if isLocked {
-            appde.allowRotation = false
+            appde.allowRotation = true
             isLocked = false
         }else{
-            appde.allowRotation = true
+            appde.allowRotation = false
             isLocked = true
         }
     }
