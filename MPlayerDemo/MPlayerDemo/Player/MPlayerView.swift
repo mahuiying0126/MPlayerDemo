@@ -908,7 +908,8 @@ final class MPlayerView: UIView,UIGestureRecognizerDelegate,MChangeRateValueDele
                 info[MPMediaItemPropertyArtwork] = artWork
             } else {
                 // Fallback on earlier versions
-                info[MPMediaItemPropertyArtwork] = image
+                let artWorkImage = MPMediaItemArtwork.init(image: image!)
+                info[MPMediaItemPropertyArtwork] = artWorkImage
             }
             
             if self.playerItem?.duration != nil {

@@ -15,7 +15,6 @@ class MPlayerViewModel: NSObject {
      var topImageView : UIImageView?
     /** *关闭按钮 */
      var closeBtn : UIButton?
-
     /** *音频视频切换，倍速三个按钮 */
     var rateView : RateView?
     /** *中间暂停按钮 */
